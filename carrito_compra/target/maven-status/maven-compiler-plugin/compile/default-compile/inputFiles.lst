@@ -1,0 +1,8 @@
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/Application.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/controller/ShopController.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/entity/CartItem.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/entity/Product.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/repository/CartItemRepository.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/repository/ProductRepository.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/service/ShopService.java
+/home/edilser/carrito_compra/src/main/java/com/example/carrito_compra/service/ShopServiceImpl.java

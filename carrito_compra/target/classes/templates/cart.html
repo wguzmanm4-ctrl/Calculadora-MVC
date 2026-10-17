@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+  <header class="bar">
+    <h1>Tu carrito</h1>
+    <nav><a href="/">Seguir comprando</a></nav>
+  </header>
+  <table>
+    <thead><tr><th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th><th></th></tr></thead>
+    <tbody>
+      <tr th:each="it : ${items}">
+        <td th:text="${it.name}">Prod</td>
+        <td th:text="${it.price}">0.00</td>
+        <td th:text="${it.quantity}">1</td>
+        <td th:text="${it.subtotal}">0.00</td>
+        <td>
+          <form method="post" action="/cart/remove">
+            <input type="hidden" name="productId" th:value="${it.productId}" />
+            <button>Quitar</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Total: $<span th:text="${total}">0.00</span></h3>
+  <form method="post" action="/cart/checkout">
+    <button>Pagar</button>
+  </form>
+</div>
+</body>
+</html>
