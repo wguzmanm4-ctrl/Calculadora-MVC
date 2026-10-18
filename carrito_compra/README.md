@@ -1,27 +1,23 @@
-# shop3layers â€” Spring Boot MVC (3 capas)
+# Carrito de Compras - Spring Boot
 
-Capas:
-- **Controller (Web)**: recibe peticiones y orquesta la vista (Thymeleaf).
-- **Service (Business)**: lÃ³gica de negocio y gestiÃ³n del carrito.
-- **Repository (Persistence)**: acceso a BD con Spring Data JPA.
+Proyecto backend desarrollado con Java y Spring Boot para la gestión de una tienda en línea y su carrito de compras. Utiliza una arquitectura monolítica por capas y persistencia en base de datos relacional.
 
-## Ejecutar
-```bash
-mvn spring-boot:run
-# http://localhost:8080
-```
-**H2 en memoria**, semillas en `src/main/resources/data.sql`.
+## Tecnologías utilizadas
+* **Java 21**
+* **Spring Boot 3.3.3**
+* **Spring Data JPA** (Hibernate)
+* **Thymeleaf** (Motor de plantillas para el frontend)
+* **MariaDB / MySQL** (Base de datos)
+* **Maven** (Gestor de dependencias)
+* **JUnit 5 y Mockito** (Pruebas unitarias)
 
-## Estructura
-```
-shop3layers/
-  src/main/java/com/example/shop3layers/
-    controller/ShopController.java
-    service/ShopService.java, ShopServiceImpl.java
-    repository/ProductRepository.java
-    domain/Product.java, CartItem.java
-  src/main/resources/
-    templates/index.html, cart.html
-    static/style.css
-    application.properties, data.sql
-```
+## Requisitos previos
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
+1. JDK 21
+2. MariaDB o MySQL corriendo en el puerto 3306
+3. Maven
+
+## Configuración de la Base de Datos
+1. Ingresa a MariaDB y crea la base de datos:
+   ```sql
+   CREATE DATABASE shop;
